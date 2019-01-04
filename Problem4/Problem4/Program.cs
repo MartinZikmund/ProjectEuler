@@ -8,10 +8,13 @@ namespace Problem4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine((from a in Enumerable.Range(100, 999 - 100 + 1)
-             from b in Enumerable.Range(100, 999 - 100 + 1)
-             select a * b).Where(product => product.ToString().Reverse().SequenceEqual(product.ToString()))
-                .Max());
+            var range = Enumerable.Range(100, 999 - 100 + 1);
+            Console.WriteLine(
+                (from a in range
+                 from b in range
+                 select a * b)
+                    .Where(product => product.ToString().Reverse().SequenceEqual(product.ToString()))
+                    .Max());
         }
     }
 }
