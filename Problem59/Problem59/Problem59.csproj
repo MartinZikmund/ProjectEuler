@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cipher.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="cipher.txt" />
+  </ItemGroup>
+
+</Project>
